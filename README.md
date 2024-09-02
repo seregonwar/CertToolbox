@@ -23,7 +23,7 @@
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/CertToolbox.git
+    git clone https://github.com/seregonwar/CertToolbox.git
     ```
 2. Install the requirements:
     ```sh
@@ -33,7 +33,7 @@
 ## Usage
 1. Run the script:
     ```sh
-    python CertCustomModifier.py
+    python CertToolBox.py
     ```
 2. Use the graphical interface to select the `.p12` and `.mobileprovision` files and enter the new information.
 
