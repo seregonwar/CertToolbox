@@ -139,7 +139,12 @@ def modify_p12_and_mobileprovision(p12_file, mobileprovision_file, old_password,
         # Modify the mobileprovision file
         cleaned_xml = clean_and_extract_xml(mobileprovision_file)
         if cleaned_xml:
-            modified_xml = modify_xml(cleaned_xml, new_issuer if not modify_only_expiry else certificate.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value, datetime.strptime(new_expiry_date, "%Y%m%d%H%M%SZ"))
+            modified_xml = modify_xml(
+                cleaned_xml, 
+                new_issuer if not modify_only_expiry else certificate.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value, 
+                datetime.strptime(new_expiry_date, "%Y%m%d%H%M%SZ"),
+                modify_only_expiry
+            )
             modified_mobileprovision_file = mobileprovision_file.replace('.mobileprovision', '_modified.mobileprovision')
             reassemble_mobileprovision(mobileprovision_file, modified_xml, modified_mobileprovision_file)
 
