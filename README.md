@@ -1,5 +1,5 @@
 # CertToolbox
-
+[![Github All Releases](https://img.shields.io/github/downloads/seregonwar/CertToolBox/total.svg)]()
 ## Overview
 
 `CertToolbox` is a powerful Python-based utility designed to streamline the management and modification of `.p12` and `.mobileprovision` files. With `CertToolbox`, you can easily update essential certificate and provisioning information, such as issuer name, expiration date, country, and organization, all within a user-friendly graphical interface.
